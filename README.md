@@ -6,3 +6,6 @@
 #
 #### `https://rednooby.tistory.com/105`
 #### `https://webthemez.com/` 안의 `https://webthemez.com/target-free-responsive-bootstrap-admin-template/` 을 사용함
+
+#
+#### `Font Awesome` 사용법 : `https://amango.tistory.com/7`
