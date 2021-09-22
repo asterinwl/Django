@@ -9,3 +9,6 @@
 
 #
 #### `Font Awesome` 사용법 : `https://amango.tistory.com/7`
+
+#
+#### 장고 css 적용 안될 때 : `https://meaownworld.tistory.com/89` = 인터넷 사용 기록을 없애보세요!(css를 바꾸기 바로 직전부터 지금까지) 저는 이 방법으로 해결했습니다.
