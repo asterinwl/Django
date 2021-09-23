@@ -1,0 +1,161 @@
+Microsoft Windows [Version 10.0.19042.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>cd C:\Users\admin\Desktop\data_self_study\Django
+
+C:\Users\admin\Desktop\data_self_study\Django>git https://github.com/asterinwl/Django.git
+git: 'https://github.com/asterinwl/Django.git' is not a git command. See 'git --help'.
+
+C:\Users\admin\Desktop\data_self_study\Django>git clone https://github.com/asterinwl/Django.git
+Cloning into 'Django'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+C:\Users\admin\Desktop\data_self_study\Django>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 90FF-4819
+
+ C:\Users\admin\Desktop\data_self_study\Django 디렉터리
+
+2021-09-07  오전 11:09    <DIR>          .
+2021-09-07  오전 11:09    <DIR>          ..
+2021-09-06  오후 06:00             4,300 1_준비하기.txt
+2021-09-06  오후 06:01           128,220 1_준비하기_결과.png
+2021-09-07  오전 11:09    <DIR>          Django
+               2개 파일             132,520 바이트
+               3개 디렉터리  740,942,569,472 바이트 남음
+
+C:\Users\admin\Desktop\data_self_study\Django>django-admin startproject ToDoList
+
+C:\Users\admin\Desktop\data_self_study\Django>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 90FF-4819
+
+ C:\Users\admin\Desktop\data_self_study\Django 디렉터리
+
+2021-09-07  오전 11:14    <DIR>          .
+2021-09-07  오전 11:14    <DIR>          ..
+2021-09-06  오후 06:00             4,300 1_준비하기.txt
+2021-09-06  오후 06:01           128,220 1_준비하기_결과.png
+2021-09-07  오전 11:09    <DIR>          Django
+2021-09-07  오전 11:14    <DIR>          ToDoList
+               2개 파일             132,520 바이트
+               4개 디렉터리  740,941,295,616 바이트 남음
+
+C:\Users\admin\Desktop\data_self_study\Django>dir /z
+스위치가 틀립니다 - "z".
+
+C:\Users\admin\Desktop\data_self_study\Django>dir /a
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 90FF-4819
+
+ C:\Users\admin\Desktop\data_self_study\Django 디렉터리
+
+2021-09-07  오전 11:14    <DIR>          .
+2021-09-07  오전 11:14    <DIR>          ..
+2021-09-06  오후 06:00             4,300 1_준비하기.txt
+2021-09-06  오후 06:01           128,220 1_준비하기_결과.png
+2021-09-07  오전 11:09    <DIR>          Django
+2021-09-07  오전 11:14    <DIR>          ToDoList
+               2개 파일             132,520 바이트
+               4개 디렉터리  740,941,033,472 바이트 남음
+
+C:\Users\admin\Desktop\data_self_study\Django>cd T*
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py startapp my_to_do_app
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 90FF-4819
+
+ C:\Users\admin\Desktop\data_self_study\Django\ToDoList 디렉터리
+
+2021-09-07  오전 11:22    <DIR>          .
+2021-09-07  오전 11:22    <DIR>          ..
+2021-09-07  오전 11:14               686 manage.py
+2021-09-07  오전 11:22    <DIR>          my_to_do_app
+2021-09-07  오전 11:22    <DIR>          ToDoList
+               1개 파일                 686 바이트
+               4개 디렉터리  740,937,342,976 바이트 남음
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 07, 2021 - 11:27:33
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 11:28:11] "GET / HTTP/1.1" 200 10697
+[07/Sep/2021 11:28:11] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[07/Sep/2021 11:28:11] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[07/Sep/2021 11:28:11] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[07/Sep/2021 11:28:11] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[07/Sep/2021 11:28:11] "GET /favicon.ico HTTP/1.1" 404 2112
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\ToDoList\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\anaconda3\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\commands\runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\base.py", line 419, in check
+    all_issues = checks.run_checks(
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\checks\urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\checks\urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\admin\anaconda3\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data_self_study\Django\ToDoList\ToDoList\urls.py", line 21
+    path('admin/', admin.site.urls),
+    ^
+SyntaxError: invalid syntax
+
+## 구문에 오류가 생긴 현상이다. urls를 url로 적는 참사를 일으켜서 오류가 생겼다.
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 07, 2021 - 11:47:20
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 11:47:34] "GET / HTTP/1.1" 200 23

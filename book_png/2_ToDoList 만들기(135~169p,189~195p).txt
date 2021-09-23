@@ -1,0 +1,302 @@
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 07, 2021 - 13:47:40
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 13:47:46] "GET / HTTP/1.1" 200 2651
+[07/Sep/2021 13:47:47] "GET / HTTP/1.1" 200 2651
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 07, 2021 - 13:56:16
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py makemigrations
+Migrations for 'my_to_do_app':
+  my_to_do_app\migrations\0001_initial.py
+    - Create model Todo
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, my_to_do_app, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying my_to_do_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py dbshell
+SQLite version 3.35.4 2021-04-02 15:20:15
+Enter ".help" for usage hints.
+sqlite> .tables
+auth_group                  django_admin_log
+auth_group_permissions      django_content_type
+auth_permission             django_migrations
+auth_user                   django_session
+auth_user_groups            my_to_do_app_todo
+auth_user_user_permissions
+sqlite> PRAGMA table_info(my_to_do_app_todo)
+   ...> ;
+0|id|integer|1||1
+1|content|varchar(255)|1||0
+sqlite> select * from my_to_do_app_todo;
+sqlite>
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\base.py", line 398, in execute
+    output = self.handle(*args, **options)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\commands\dbshell.py", line 26, in handle
+    connection.client.runshell(options['parameters'])
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\db\backends\base\client.py", line 25, in runshell
+    subprocess.run(args, env=env, check=True)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 495, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1020, in communicate
+    self.wait()
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1361, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+KeyboardInterrupt
+^C  // ctrl+c를 누르면 나갈 수 있다.
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:18:45
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 14:18:56] Not Found: /createTodo/
+"GET / HTTP/1.1" 200 2664
+[07/Sep/2021 14:19:22] "GET / HTTP/1.1" 200 2664
+[07/Sep/2021 14:20:17] "POST /createTodo/ HTTP/1.1" 404 2260
+Not Found: /createTodo/
+Not Found: /createTodo/
+[07/Sep/2021 14:20:17,184] - Broken pipe from ('127.0.0.1', 9857)
+
+[07/Sep/2021 14:20:17,184] - Broken pipe from ('127.0.0.1', 13350)
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:29:11
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:29:26
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 14:29:31] "GET / HTTP/1.1" 200 2664
+[07/Sep/2021 14:29:34] "POST /createTodo/ HTTP/1.1" 200 26
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:39:18
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 14:39:46] "GET / HTTP/1.1" 200 2664
+[07/Sep/2021 14:39:48] "POST /createTodo/ HTTP/1.1" 200 29
+[07/Sep/2021 14:40:22] "POST /createTodo/ HTTP/1.1" 200 93
+[07/Sep/2021 14:40:45] "POST /createTodo/ HTTP/1.1" 200 93
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:46:38
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 14:46:43] "GET / HTTP/1.1" 200 2664
+[07/Sep/2021 14:46:46] "POST /createTodo/ HTTP/1.1" 200 29
+[07/Sep/2021 14:47:02] "POST /createTodo/ HTTP/1.1" 200 48
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py dbchell
+Unknown command: 'dbchell'. Did you mean dbshell?
+Type 'manage.py help' for usage.
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py dbshell
+SQLite version 3.35.4 2021-04-02 15:20:15
+Enter ".help" for usage hints.
+sqlite> select * from my_to_do_app_Todo;
+1|
+2|나는야 김민형
+sqlite>
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\base.py", line 398, in execute
+    output = self.handle(*args, **options)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\management\commands\dbshell.py", line 26, in handle
+    connection.client.runshell(options['parameters'])
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\db\backends\base\client.py", line 25, in runshell
+    subprocess.run(args, env=env, check=True)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 495, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1020, in communicate
+    self.wait()
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "C:\Users\admin\anaconda3\lib\subprocess.py", line 1361, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+KeyboardInterrupt
+^C
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 15:12:27
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\admin\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\views.py", line 8, in index
+    todos=Todo.object.all()
+AttributeError: type object 'Todo' has no attribute 'object'
+[07/Sep/2021 15:12:37] "GET / HTTP/1.1" 500 62546
+Not Found: /favicon.ico
+[07/Sep/2021 15:12:37] "GET /favicon.ico HTTP/1.1" 404 2450
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 15:14:16
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 15:14:25] "GET / HTTP/1.1" 200 3226
+Not Found: /favicon.ico
+[07/Sep/2021 15:14:25] "GET /favicon.ico HTTP/1.1" 404 2450
+[07/Sep/2021 15:14:50] "POST /createTodo/ HTTP/1.1" 302 0
+[07/Sep/2021 15:14:50] "GET / HTTP/1.1" 200 3852
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 18:27:31
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Sep/2021 18:27:57] "GET / HTTP/1.1" 200 7665
+완료한 todo의 id 4
+[07/Sep/2021 18:28:03] "GET /deleteTodo/?todoNum=4 HTTP/1.1" 302 0
+[07/Sep/2021 18:28:03] "GET / HTTP/1.1" 200 7665
+완료한 todo의 id 5
+[07/Sep/2021 18:28:08] "GET /deleteTodo/?todoNum=5 HTTP/1.1" 302 0
+[07/Sep/2021 18:28:08] "GET / HTTP/1.1" 200 7665
+완료한 todo의 id 6
+[07/Sep/2021 18:28:14] "GET /deleteTodo/?todoNum=6 HTTP/1.1" 302 0
+[07/Sep/2021 18:28:15] "GET / HTTP/1.1" 200 7665
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+## 168p 확인 누르면 해당되는 값을 보여줌
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 18:30:31
+Django version 3.2.4, using settings 'ToDoList.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+완료한 todo의 id 4
+[07/Sep/2021 18:31:19] "GET /deleteTodo/?todoNum=4 HTTP/1.1" 302 0
+[07/Sep/2021 18:31:19] "GET / HTTP/1.1" 200 7074
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList\my_to_do_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+## 169p 확인 누르면 값이 사라짐
+
+--------------------------------------------------------------------------------------------------------------------------
+## 189p 시작
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py makemigrations
+Migrations for 'my_to_do_app':
+  my_to_do_app\migrations\0002_todo_isdone.py
+    - Add field isDone to todo
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, my_to_do_app, sessions
+Running migrations:
+  Applying my_to_do_app.0002_todo_isdone... OK
+
+C:\Users\admin\Desktop\data_self_study\Django\ToDoList>python manage.py dbshell
+SQLite version 3.35.4 2021-04-02 15:20:15
+Enter ".help" for usage hints.
+sqlite> select * from my_to_do_app_todo;
+1||0
+2|나는야 김민형|0
+3|"메모하기" 버튼 옆에 입력한 문자열! 난 김민형.|0
+5|나는 행복한 김민형|0
+6|나는 행복한 김민형|0
+sqlite>
