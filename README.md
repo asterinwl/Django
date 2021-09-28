@@ -12,3 +12,6 @@
 
 #
 #### 장고 css 적용 안될 때 : `https://meaownworld.tistory.com/89` = 인터넷 사용 기록을 없애보세요!(css를 바꾸기 바로 직전부터 지금까지) 저는 이 방법으로 해결했습니다. 아마 쿠키에 기존 css가 저장되어 있어서 적용이 안되는 거 같아요. 그래서 인터넷 사용 기록을 다 없애줘야 한답니다.
+
+#
+#### HTML에 관한 꿀팁은 `https://ojji.wayful.com/2019/07/HTML-tag-how-to-align-and-float-image.html`에 잔뜩 있습니다.
