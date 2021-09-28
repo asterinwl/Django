@@ -17,4 +17,4 @@
 #### HTML에 관한 꿀팁은 `https://ojji.wayful.com/2019/07/HTML-tag-how-to-align-and-float-image.html`에 잔뜩 있습니다.
 
 #
-#### Project_png 파일에 Django를 다루는 데 필요한 여러 꿀팁들이 잔뜩 들어있으니 꼭 확인 부탁드립니다=)
+#### `Project_png` 파일에 Django를 다루는 데 필요한 여러 꿀팁들이 잔뜩 들어있으니 꼭 확인 부탁드립니다=)
